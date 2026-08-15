@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Free KAHI Multi Balm Stick</title>
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0B0E14;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 15px;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    /* BRAND / HEADER */
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .brand-logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+
+    .brand-divider {
+      color: #333945;
+      font-size: 18px;
+    }
+
+    .brand-tag {
+      border: 1px solid #FF8A00;
+      color: #FF8A00;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: rgba(255, 138, 0, 0.05);
+    }
+
+    /* HEADLINE */
+    .main-title {
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .main-title span {
+      color: #FF8A00;
+    }
+
+    .subtitle {
+      color: #9EA0A5;
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 440px;
+      margin: 0 auto 30px;
+    }
+
+    /* GLOWING MAIN CARD */
+    .product-card {
+      background: linear-gradient(180deg, rgba(40, 32, 20, 0.6) 0%, rgba(20, 22, 28, 0.95) 100%);
+      border: 1px solid rgba(255, 138, 0, 0.25);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 0 40px rgba(255, 138, 0, 0.08);
+      margin-bottom: 24px;
+    }
+
+    /* ADJUSTED PRODUCT IMAGE CONTAINER FOR FULL BANNER IMAGES */
+    .image-box {
+      width: 100%;
+      max-width: 380px;
+      height: 500px;
+      margin: 0 auto 24px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .image-box {
+        height: 400px;
+      }
+    }
+
+    /* INNER FEATURE LIST BOX */
+    .features-list {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 16px 20px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .feature-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      background: #FF8A00;
+      color: #000000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .feature-item p {
+      color: #E0E0E0;
+    }
+
+    .feature-item strong {
+      color: #FFFFFF;
+    }
+
+    /* STATUS & PRICE ROW */
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 5px;
+    }
+
+    .status-group, .price-group {
+      text-align: left;
+    }
+
+    .price-group {
+      text-align: right;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #7A7E85;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .status-val {
+      color: #00E676;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #00E676;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #00E676;
+    }
+
+    .price-val {
+      font-size: 22px;
+      font-weight: 900;
+      color: #00E676;
+    }
+
+    .price-old {
+      text-decoration: line-through;
+      color: #6C7078;
+      font-size: 14px;
+      margin-right: 6px;
+      font-weight: 500;
+    }
+
+    /* PROGRESS BAR BOX */
+    .progress-box {
+      background: #12161F;
+      border: 1px solid #1E232F;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .progress-left {
+      color: #FF8A00;
+      text-transform: uppercase;
+    }
+
+    .progress-right {
+      color: #8C9099;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background-color: #1C202B;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 82%;
+      height: 100%;
+      background: linear-gradient(90deg, #FF8A00 0%, #FFA800 100%);
+      border-radius: 10px;
+    }
+
+    /* STEPS LIST */
+    .steps-container {
+      text-align: left;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 5px;
+    }
+
+    .step-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      background: rgba(255, 138, 0, 0.15);
+      color: #FF8A00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: #C5C8D0;
+      line-height: 1.4;
+    }
+
+    .step-text strong {
+      color: #FFFFFF;
+    }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(180deg, #FF9500 0%, #E67E00 100%);
+      color: #000000;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 18px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 20px rgba(255, 149, 0, 0.3);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 149, 0, 0.45);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* FOOTER DISCLAIMER */
+    .disclaimer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #585C66;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- BRAND / HEADER -->
+    <header class="brand-header">
+      <div class="brand-logo">amazon</div>
+      <span class="brand-divider">|</span>
+      <span class="brand-tag">SPECIAL GIVEAWAY</span>
+    </header>
+
+    <!-- MAIN HEADLINE -->
+    <h1 class="main-title">
+      CLAIM YOUR <span>KAHI MULTI BALM</span> TODAY
+    </h1>
+    <p class="subtitle">
+      Get the viral #1 Korean Beauty skincare stick. Instantly hydrate fine lines, boost elasticity, and achieve a glowing glass-skin finish anywhere.
+    </p>
+
+    <!-- PRODUCT CARD -->
+    <div class="product-card">
+      <div class="image-box">
+        <img src="https://i.postimg.cc/L4yJ15FH/03b3b5e67f60a4310f834d647fa2ba7d.jpg" alt="KAHI PDRN Collagen Wrinkle Bounce Multi Balm Stick Promo Banner">
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Full-Size Product:</strong> Official 9g Wrinkle Bounce Stick</p>
+        </div>
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Salmon Collagen Formula:</strong> Target fine lines & neck wrinkles</p>
+        </div>
+        <div class="feature-item">
+          <div class="check-icon">✓</div>
+          <p><strong>Free Shipping Included:</strong> Delivered straight to your door</p>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <div class="status-group">
+          <span class="meta-label">ITEM STATUS</span>
+          <div class="status-val">
+            <span class="status-dot"></span> In Stock & Ready
+          </div>
+        </div>
+        <div class="price-group">
+          <span class="meta-label">RETAIL PRICE</span>
+          <div>
+            <span class="price-old">$24.00</span>
+            <span class="price-val">FREE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPDATED STOCK PROGRESS BAR -->
+    <div class="progress-box">
+      <div class="progress-meta">
+        <span class="progress-left">FREE BALMS LEFT: 18 PRODUCTS</span>
+        <span class="progress-right">82% CLAIMED</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS / STEPS -->
+    <div class="steps-container">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-text">Click the button below to start instant verification.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-text">Complete <strong>ONE quick & simple offer</strong> to unlock your claim.</div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-text">Your <strong>KAHI Multi Balm</strong> order will process automatically!</div>
+      </div>
+    </div>
+
+    <!-- CTA BUTTON -->
+    <a href="YOUR_CPA_OFFER_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn-cta">
+      <svg class="btn-icon" viewBox="0 0 24 24">
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+      </svg>
+      COMPLETE 1 OFFER TO CLAIM
+    </a>
+
+    <!-- DISCLAIMER -->
+    <p class="disclaimer">
+      *Verification is required to prevent automated bots & ensure free access for real users.
+    </p>
+
+  </div>
+
+</body>
+</html>
