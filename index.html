@@ -23,7 +23,7 @@
       --amazon-link-hover: #C7511F;
       --amazon-star: #DE7921;
       --amazon-green: #007600;
-      --bg-gray: #F3F3F3;
+      --bg-gray: #EAEDED;
       --border-color: #D5D9D9;
       --font-family: Arial, Helvetica, sans-serif;
     }
@@ -202,28 +202,30 @@
       padding: 15px;
     }
 
-    /* HERO SECTION */
+    /* AMAZON-UPDATED HERO SECTION & TRUST BADGES */
     .hero {
       background-color: #FFFFFF;
       border: 1px solid var(--border-color);
+      border-top: 4px solid var(--amazon-navy);
       border-radius: 8px;
       padding: 24px;
       margin-bottom: 20px;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
     }
 
     .hero h1 {
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 8px;
-      color: var(--amazon-text);
+      color: var(--amazon-navy);
     }
 
     .hero p {
       font-size: 15px;
-      color: #565959;
+      color: #333333;
       max-width: 750px;
-      margin: 0 auto 16px auto;
+      margin: 0 auto 18px auto;
     }
 
     .trust-badges {
@@ -231,16 +233,31 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
-      color: var(--amazon-green);
     }
 
     .trust-badge-item {
-      background-color: #F0F8F0;
-      padding: 6px 12px;
+      background-color: #F7F8F8;
+      color: #232F3E;
+      padding: 6px 14px;
       border-radius: 4px;
-      border: 1px solid #BCE1BC;
+      border: 1px solid #D5D9D9;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .trust-badge-item::before {
+      content: "✓";
+      color: var(--amazon-amber);
+      font-weight: 900;
+    }
+
+    .trust-badge-item:hover {
+      background-color: #EDF4F6;
+      border-color: #007185;
     }
 
     /* PRODUCT GRID */
