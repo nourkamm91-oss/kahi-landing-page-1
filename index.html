@@ -202,62 +202,59 @@
       padding: 15px;
     }
 
-    /* AMAZON-UPDATED HERO SECTION & TRUST BADGES */
+    /* ORANGE & RED HERO SECTION STYLING */
     .hero {
-      background-color: #FFFFFF;
-      border: 1px solid var(--border-color);
-      border-top: 4px solid var(--amazon-navy);
-      border-radius: 8px;
-      padding: 24px;
+      background: linear-gradient(135deg, #B12704 0%, #E65100 50%, #FF9900 100%) !important;
+      border: 1px solid #B12704 !important;
+      border-radius: 12px;
+      padding: 26px 20px;
       margin-bottom: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 15px rgba(177, 39, 4, 0.25);
     }
 
     .hero h1 {
+      color: #FFFFFF !important;
       font-size: 26px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 8px;
-      color: var(--amazon-navy);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     }
 
     .hero p {
+      color: #FFF5EA !important;
       font-size: 15px;
-      color: #333333;
       max-width: 750px;
       margin: 0 auto 18px auto;
+      line-height: 1.5;
+      font-weight: 500;
     }
 
     .trust-badges {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
       font-size: 12px;
       font-weight: bold;
     }
 
     .trust-badge-item {
-      background-color: #F7F8F8;
-      color: #232F3E;
+      background: rgba(255, 255, 255, 0.2) !important;
+      color: #FFFFFF !important;
       padding: 6px 14px;
-      border-radius: 4px;
-      border: 1px solid #D5D9D9;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      backdrop-filter: blur(4px);
       transition: background-color 0.2s ease;
     }
 
-    .trust-badge-item::before {
-      content: "✓";
-      color: var(--amazon-amber);
-      font-weight: 900;
-    }
-
     .trust-badge-item:hover {
-      background-color: #EDF4F6;
-      border-color: #007185;
+      background: rgba(255, 255, 255, 0.3) !important;
     }
 
     /* PRODUCT GRID */
@@ -636,18 +633,16 @@
 
   <div class="container">
 
-    <!-- ABOVE THE FOLD (HERO BANNER) -->
+    <!-- HERO BANNER (ORANGE & RED DEAL GRADIENT) -->
     <section class="hero">
-      <!-- ABOVE THE FOLD (HERO BANNER - INLINE STYLING) -->
-<section class="hero" style="background-color: #FFFFFF !important; border: 1px solid #D5D9D9 !important; border-top: 4px solid #131921 !important; border-radius: 8px; padding: 24px; margin-bottom: 20px; text-align: center;">
-  <h1 style="color: #131921 !important; font-size: 26px; font-weight: 700; margin-bottom: 8px;">Top-Trending Korean Skincare: Collagen & PDRN Balm Sticks</h1>
-  <p style="color: #333333 !important; font-size: 15px; max-width: 750px; margin: 0 auto 18px auto;">Discover the 3 viral multi-balm sticks taking social media by storm. Deep hydration, elasticity, and wrinkle care—all in one swipe.</p>
-  <div class="trust-badges" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;">
-    <span style="background-color: #F7F8F8 !important; color: #232F3E !important; padding: 6px 14px; border-radius: 4px; border: 1px solid #D5D9D9 !important; font-size: 12px; font-weight: bold;">✔ Verified Reviews</span>
-    <span style="background-color: #F7F8F8 !important; color: #232F3E !important; padding: 6px 14px; border-radius: 4px; border: 1px solid #D5D9D9 !important; font-size: 12px; font-weight: bold;">✔ Fast Shipping Available</span>
-    <span style="background-color: #F7F8F8 !important; color: #232F3E !important; padding: 6px 14px; border-radius: 4px; border: 1px solid #D5D9D9 !important; font-size: 12px; font-weight: bold;">✔ 100% Authentic Korean Formula</span>
-  </div>
-</section>
+      <h1>Top-Trending Korean Skincare: Collagen & PDRN Balm Sticks</h1>
+      <p>Discover the 3 viral multi-balm sticks taking social media by storm. Deep hydration, elasticity, and wrinkle care—all in one swipe.</p>
+      <div class="trust-badges">
+        <span class="trust-badge-item">✔ Verified Reviews</span>
+        <span class="trust-badge-item">✔ Fast Shipping Available</span>
+        <span class="trust-badge-item">✔ 100% Authentic Korean Formula</span>
+      </div>
+    </section>
 
     <!-- FEATURED PRODUCTS SECTION -->
     <main class="product-grid">
