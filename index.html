@@ -531,7 +531,7 @@
       justify-content: space-between;
       gap: 12px;
       z-index: 999;
-      display: none; /* Hidden on desktop */
+      display: none;
     }
 
     .sticky-bar-info {
@@ -571,18 +571,15 @@
       color: var(--amazon-text);
     }
 
-    /* DISPLAY ONLY ON MOBILE DEVICES */
     @media (max-width: 767px) {
       .sticky-mobile-bar {
         display: flex;
       }
 
-      /* Elevate toast notification so it sits right above the sticky bar */
       .notification-toast {
         bottom: 75px;
       }
 
-      /* Add bottom padding to body so footer content isn't obscured */
       body {
         padding-bottom: 60px;
       }
@@ -803,7 +800,7 @@
       timerDisplay.textContent = `${minutes}:${seconds}`;
 
       if (--duration < 0) {
-        duration = 15 * 60; // Reset loop
+        duration = 15 * 60;
       }
     }, 1000);
 
